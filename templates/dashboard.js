@@ -1,4 +1,4 @@
-data_url = 'http://127.0.0.1:5000/api6'
+data_url = '/api6'
 
 function init() {
   // Grab a reference to the dropdown select element
