@@ -67,6 +67,16 @@ def api8():
     op2 = request.args.get('op2')
     return some_ml_8(op1, op2)
 
+'''
+example of utilize ml
+http://127.0.0.1:5000/api9
+postman>> POST>> Body>> raw>> JSON: {"op1":"str1", "op2": "str2"}
+'''
+@app.route('/api9',  methods=['POST'])
+def api9():
+    content = request.json
+    return some_ml_8(content["op1"], content["op2"])
+
 ################################################################
 # frontend view model tempalte
 ################################################################
@@ -81,20 +91,6 @@ def page1():
 def page2():
     try:
         return render_template(f'page2.html')
-    except TemplateNotFound:
-        abort(404)
-
-@app.route('/page5')
-def page3():
-    try:
-        return render_template(f'page5.html')
-    except TemplateNotFound:
-        abort(404)
-
-@app.route('/page6')
-def page4():
-    try:
-        return render_template(f'page6.html')
     except TemplateNotFound:
         abort(404)
 

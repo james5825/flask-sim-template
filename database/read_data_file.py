@@ -3,7 +3,7 @@ import json
 
 
 def read_csv_demo():
-    school_data_to_load = "database\schools_complete.csv"
+    school_data_to_load = "resources\schools_complete.csv"
     school_data_df = pd.read_csv(school_data_to_load)
     return school_data_df;
 
